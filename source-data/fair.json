@@ -1,0 +1,69 @@
+{
+  "label":"FAIR Principles",
+  "description":"FAIR Principles",
+  "reference_url":"https://www.go-fair.org/fair-principles/",
+  "reference_doi":"https://doi.org/10.1038/sdata.2016.18",
+  "items":[
+    {
+      "label":"FAIR-F1",
+      "description":"(meta)data are assigned a globally unique and persistent identifier"
+    },
+    {
+      "label":"FAIR-F2",
+      "description":"data are described with rich metadata"
+    },
+    {
+      "label":"FAIR-F3",
+      "description":"metadata clearly and explicitly include the identifier of the data it describes"
+    },
+    {
+      "label":"FAIR-F4",
+      "description":"(meta)data are registered or indexed in a searchable resource"
+    },
+    {
+      "label":"FAIR-A1,
+      "description":"(meta)data are retrievable by their identifier using a standardized communications protocol"
+    },
+    {
+      "label":"FAIR-A1.1,
+      "description":"the standardized communications protocol is open, free, and universally implementable"
+    },
+    {
+      "label":"FAIR-A1.2,
+      "description":"the standardized communications protocol allows for an authentication and authorization procedure, where necessary"
+    },
+    {
+      "label":"FAIR-A2,
+      "description":"metadata are accessible, even when the data are no longer available"
+    },
+    {
+      "label":"FAIR-I1,
+      "description":"(meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation"
+    },
+    {
+      "label":"FAIR-I2,
+      "description":"(meta)data use vocabularies that follow FAIR principles"
+    },
+    {
+      "label":"FAIR-I3,
+      "description":"(meta)data include qualified references to other (meta)data"
+    },
+    {
+      "label":"FAIR-R1,
+      "description":"meta(data) are richly described with a plurality of accurate and relevant attributes"
+    },
+    {
+      "label":"FAIR-R1.1,
+      "description":"(meta)data are released with a clear and accessible data usage license"
+    },
+    {
+      "label":"FAIR-R1.2,
+      "description":"(meta)data are associated with detailed provenance"
+    },
+    {
+      "label":"FAIR-R1.3,
+      "description":"(meta)data meet domain-relevant community standards"
+    }
+   ]
+  }
+}
