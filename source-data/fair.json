@@ -36,7 +36,7 @@
       "description":"the standardized communications protocol is open, free, and universally implementable"
     },
     {
-      "name":"FAIR-A1.2"
+      "name":"FAIR-A1.2",
       "label":"FAIR A1.2",
       "description":"the standardized communications protocol allows for an authentication and authorization procedure, where necessary"
     },
