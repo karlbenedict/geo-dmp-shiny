@@ -1,0 +1,59 @@
+{
+  "name":"geo_dm",
+  "label":"GEO Data Management Principles",
+  "description":"GEO Data Management Principles",
+  "reference_url":"https://www.earthobservations.org/documents/open_eo_data/GEO_Strategic_Plan_2016_2025_Implementing_GEOSS_Reference_Document.pdf",
+  "reference_doi":"",
+  "items":[
+    {
+      "item_name":"geo_dmp_1",
+      "item_label":"GEO DMP 1",
+      "item_description":"Metadata for discovery"
+    },
+    {
+      "item_name":"geo_dmp_2",
+      "item_label":"GEO DMP 2",
+      "item_description":"Online access"
+    },
+    {
+      "item_name":"geo_dmp_3",
+      "item_label":"GEO DMP 3",
+      "item_description":"Data encoding"
+    },
+    {
+      "item_name":"geo_dmp_4",
+      "item_label":"GEO DMP 4",
+      "item_description":"Data documentation"
+    },
+    {
+      "item_name":"geo_dmp_5",
+      "item_label":"GEO DMP 5",
+      "item_description":"Data Traceability"
+    },
+    {
+      "item_name":"geo_dmp_6",
+      "item_label":"GEO DMP 6",
+      "item_description":"Data quality control"
+    },
+    {
+      "item_name":"geo_dmp_7",
+      "item_label":"GEO DMP 7",
+      "item_description":"Data preservation"
+    },
+    {
+      "item_name":"geo_dmp_8",
+      "item_label":"GEO DMP 8",
+      "item_description":"Data and metadata verification"
+    },
+    {
+      "item_name":"geo_dmp_9",
+      "item_label":"GEO DMP 9",
+      "item_description":"Data review and reprocessing"
+    },
+    {
+      "item_name":"geo_dmp_10",
+      "item_label":"GEO DMP 10",
+      "item_description":"Persistent and resolvable identifiers"
+    }
+  ]
+}

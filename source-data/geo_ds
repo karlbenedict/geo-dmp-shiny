@@ -1,0 +1,54 @@
+{
+  "name":"geo_ds",
+  "label":"GEO Data Sharing Principles",
+  "description":"GEO Data Sharing Principles",
+  "reference_url":"https://www.earthobservations.org/documents/open_eo_data/GEO_Strategic_Plan_2016_2025_Implementing_GEOSS_Reference_Document.pdf",
+  "reference_doi":"",
+  "items":[
+    {
+      "item_name":"geo_dsp_1.1",
+      "item_label":"GEO DSP 1.1",
+      "item_description":"Shared without charge"
+    },
+    {
+      "item_name":"geo_dsp_1.2",
+      "item_label":"GEO DSP 1.2",
+      "item_description":"No restrictions on reuse"
+    },
+    {
+      "item_name":"geo_dsp_1.3",
+      "item_label":"GEO DSP 1.3",
+      "item_description":"Conditions limited to registration & attribution"
+    },
+    {
+      "item_name":"geo_dsp_1.4",
+      "item_label":"GEO DSP 1.4",
+      "item_description":"Default sharing standard through GEOSS Data-CORE"
+    },
+    {
+      "item_name":"geo_dsp_2.1",
+      "item_label":"GEO DSP 2.1",
+      "item_description":"Recognition of sharing with restrictions as an execption to Principle 1"
+    },
+    {
+      "item_name":"geo_dsp_2.2",
+      "item_label":"GEO DSP 2.2",
+      "item_description":"As few restrictions as possible"
+    },
+    {
+      "item_name":"geo_dsp_2.3",
+      "item_label":"GEO DSP 2.3",
+      "item_description":"Imposed by international instruments, national policies or legislation"
+    },
+    {
+      "item_name":"geo_dsp_2.4",
+      "item_label":"GEO DSP 2.4",
+      "item_description":"Limit charges to necessary cost recovery"
+    },
+    {
+      "item_name":"geo_dsp_3.1",
+      "item_label":"GEO DSP 3.1",
+      "item_description":"On a near-real-time basis whenever necessary or practicable"
+    }
+  ]
+}

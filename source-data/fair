@@ -1,0 +1,84 @@
+{
+  "name":"fair_principles",
+  "label":"FAIR Principles",
+  "description":"FAIR Principles",
+  "reference_url":"https://www.go-fair.org/fair-principles/",
+  "reference_doi":"https://doi.org/10.1038/sdata.2016.18",
+  "items":[
+    {
+      "item_name":"FAIR-F1",
+      "item_label":"FAIR F1",
+      "item_description":"(meta)data are assigned a globally unique and persistent identifier"
+    },
+    {
+      "item_name":"FAIR-F2",
+      "item_label":"FAIR F2",
+      "item_description":"data are described with rich metadata"
+    },
+    {
+      "item_name":"FAIR-F3",
+      "item_label":"FAIR F3",
+      "item_description":"metadata clearly and explicitly include the identifier of the data it describes"
+    },
+    {
+      "item_name":"FAIR-F4",
+      "item_label":"FAIR F4",
+      "item_description":"(meta)data are registered or indexed in a searchable resource"
+    },
+    {
+      "item_name":"FAIR-A1",
+      "item_label":"FAIR A1",
+      "item_description":"(meta)data are retrievable by their identifier using a standardized communications protocol"
+    },
+    {
+      "item_name":"FAIR-A1.1",
+      "item_label":"FAIR A1.1",
+      "item_description":"the standardized communications protocol is open, free, and universally implementable"
+    },
+    {
+      "item_name":"FAIR-A1.2",
+      "item_label":"FAIR A1.2",
+      "item_description":"the standardized communications protocol allows for an authentication and authorization procedure, where necessary"
+    },
+    {
+      "item_name":"FAIR-A2",
+      "item_label":"FAIR A2",
+      "item_description":"metadata are accessible, even when the data are no longer available"
+    },
+    {
+      "item_name":"FAIR-I1",
+      "item_label":"FAIR I1",
+      "item_description":"(meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation"
+    },
+    {
+      "item_name":"FAIR-I2",
+      "item_label":"FAIR I2",
+      "item_description":"(meta)data use vocabularies that follow FAIR principles"
+    },
+    {
+      "item_name":"FAIR-I3",
+      "item_label":"FAIR I3",
+      "item_description":"(meta)data include qualified references to other (meta)data"
+    },
+    {
+      "item_name":"FAIR-R1",
+      "item_label":"FAIR R1",
+      "item_description":"meta(data) are richly described with a plurality of accurate and relevant attributes"
+    },
+    {
+      "item_name":"FAIR-R1.1",
+      "item_label":"FAIR R1.1",
+      "item_description":"(meta)data are released with a clear and accessible data usage license"
+    },
+    {
+      "item_name":"FAIR-R1.2",
+      "item_label":"FAIR R1.2",
+      "item_description":"(meta)data are associated with detailed provenance"
+    },
+    {
+      "item_name":"FAIR-R1.3",
+      "item_label":"FAIR R1.3",
+      "item_description":"(meta)data meet domain-relevant community standards"
+    }
+  ]
+}
