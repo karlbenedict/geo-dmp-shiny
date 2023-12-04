@@ -1,0 +1,69 @@
+{
+  "name":"care",
+  "label":"CARE Principles",
+  "description":"The CARE Principles for Indigenous Data Governance",
+  "reference_url":"https://www.gida-global.org/care",
+  "reference_doi":"https://doi.org/10.5334/dsj-2020-042",
+  "items":[
+    {
+      "item_name":"care-c1",
+      "item_label":"CARE C1",
+      "item_description":"Collective Benefit - For inclusive development and innovation"
+    },
+    {
+      "item_name":"care-c2",
+      "item_label":"CARE C2",
+      "item_description":"Collective Benefit - For improved governance and citizen engagement"
+    },
+    {
+      "item_name":"care-c3",
+      "item_label":"CARE C3",
+      "item_description":"Collective Benefit - For equitiable outcomes"
+    },
+    {
+      "item_name":"care-a1",
+      "item_label":"CARE A1",
+      "item_description":"Authority to Control - Recognizing rights and interests"
+    },
+    {
+      "item_name":"care-a2",
+      "item_label":"CARE A2",
+      "item_description":"Authority to Control - Data for governance"
+    },
+    {
+      "item_name":"care-a3",
+      "item_label":"CARE A3",
+      "item_description":"Authority to Control - Governance of data"
+    },
+    {
+      "item_name":"care-r1",
+      "item_label":"CARE R1",
+      "item_description":"Responsibility - For positive relationships"
+    },
+    {
+      "item_name":"care-r2",
+      "item_label":"CARE R2",
+      "item_description":"Responsibility - For expanding capability and capacity"
+    },
+    {
+      "item_name":"care-r3",
+      "item_label":"CARE R3",
+      "item_description":"Responsibility - For Indigenous languages and worldviews"
+    },
+    {
+      "item_name":"care-e1",
+      "item_label":"CARE E1",
+      "item_description":"Ethics - For minimizing harm and miximizing benefit"
+    },
+    {
+      "item_name":"care-e2",
+      "item_label":"CARE E2",
+      "item_description":"Ethics - For justice"
+    },
+    {
+      "item_name":"care-e3",
+      "item_label":"CARE E3",
+      "item_description":"Ethics - For future use"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "name":"nist",
+  "label":"NIST Research Data Framework",
+  "description":"NIST Research Data Framework",
+  "reference_url":"https://www.nist.gov/programs-projects/research-data-framework-rdaf",
+  "reference_doi":"",
+  "items":[
+    {
+      "item_name":"nist-envison",
+      "item_label":"NIST E",
+      "item_description":"Envision"
+    },
+    {
+      "item_name":"nist-plan",
+      "item_label":"NIST Pln",
+      "item_description":"Plan"
+    },
+    {
+      "item_name":"nist-generate-acquire",
+      "item_label":"NIST GA",
+      "item_description":"Generate/Acquire"
+    },
+    {
+      "item_name":"dataone-process-analyze",
+      "item_label":"NIST PA",
+      "item_description":"Process/Analyze"
+    },
+    {
+      "item_name":"dataone-use-reuse",
+      "item_label":"NIST UR",
+      "item_description":"Use/Reuse"
+    },
+    {
+      "item_name":"dataone-preserve-discard",
+      "item_label":"NIST PD",
+      "item_description":"Preserve/Discard"
+    }
+  ]
+}

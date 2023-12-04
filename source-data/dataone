@@ -1,0 +1,49 @@
+{
+  "name":"dataone",
+  "label":"DataONE Data Lifecycle",
+  "description":"DataONE Data Lifecycle",
+  "reference_url":"https://dataoneorg.github.io/Education/bestpractices/",
+  "reference_doi":"",
+  "items":[
+    {
+      "item_name":"dataone-plan",
+      "item_label":"DataONE Pla",
+      "item_description":"Plan"
+    },
+    {
+      "item_name":"dataone-collect",
+      "item_label":"DataONE Col",
+      "item_description":"Collect"
+    },
+    {
+      "item_name":"dataone-assure",
+      "item_label":"DataONE Asr",
+      "item_description":"Assure"
+    },
+    {
+      "item_name":"dataone-describe",
+      "item_label":"DataONE Des",
+      "item_description":"Describe"
+    },
+    {
+      "item_name":"dataone-preserve",
+      "item_label":"DataONE Pre",
+      "item_description":"Preserve"
+    },
+    {
+      "item_name":"dataone-discover",
+      "item_label":"DataONE Dis",
+      "item_description":"Discover"
+    },
+    {
+      "item_name":"dataone-integrate",
+      "item_label":"DataONE Int",
+      "item_description":"Integrate"
+    },
+    {
+      "item_name":"dataone-analyze",
+      "item_label":"DataONE Ana",
+      "item_description":"Analyze"
+    }
+  ]
+}

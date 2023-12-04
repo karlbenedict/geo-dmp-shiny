@@ -16,21 +16,42 @@ library(uuid)
 
 # Setup ########################################################################
 principles_labels <- c(
-  "FAIR", 
-  "GEO Data Sharing", 
-  "GEO Data Management"
+  "FAIR Principles", 
+  "GEO Data Sharing Principles", 
+  "GEO Data Management Principles",
+  "TRUST Principles",
+  "CARE Principles",
+  "DataONE Lifecycle",
+  "NIST Research Data Framework",
+  "EEA Data/Information management framework",
+  "US NSTC Framework for EO Data",
+  "NOAA Environmental Data Management Framework"
 )
 principles_names <- c(
   "fair",
   "geo_ds",
-  "geo_dm"
+  "geo_dm",
+  "trust",
+  "care",
+  "dataone",
+  "nist",
+  "eea",
+  "nstc",
+  "edmf"
 )
 names(principles_names) <- principles_labels
 principles_files <- c(
   "source-data/fair",
   "source-data/geo_ds",
-  "source-data/geo_dm"
-  )
+  "source-data/geo_dm",
+  "source-data/trust",
+  "source-data/care",
+  "source-data/dataone",
+  "source-data/nist",
+  "source-data/eea",
+  "source-data/nstc",
+  "source-data/edmf"
+)
 names(principles_files) <- principles_names
 
 values <- reactiveValues()
@@ -170,7 +191,7 @@ ui = fluidPage(
       radioButtons("relationship", 
                    label = "Relationship between source and target principles", 
                    choices = list(
-                     "Opposes" = -1,
+                     "Limits" = -1,
                      "No relationship" = 0,
                      "Supports" = 1
                     ),
@@ -303,7 +324,7 @@ server = function(input, output, session) {
                                  midpoint=0.0, 
                                  limits=c(-1, 1),
                                  breaks=c(-1,0,1),
-                                 labels=c("Opposes", "No Relationship", "Supports"),
+                                 labels=c("Limits", "No Relationship", "Supports"),
                                  name="Type of Relationship") +
       geom_node_label(aes(label = item_label, color = label), repel = FALSE, size = 4) +
       labs(color='Principle Framework')

@@ -1,0 +1,34 @@
+{
+  "name":"trust",
+  "label":"TRUST Principles",
+  "description":"TRUST Principles",
+  "reference_url":"https://www.nature.com/articles/s41597-020-0486-7",
+  "reference_doi":"https://doi.org/10.1038/s41597-020-0486-7",
+  "items":[
+    {
+      "item_name":"trust-tr",
+      "item_label":"TRUST Tr",
+      "item_description":"To be transparent about specific repository services and data holdings that are verifiable by publicly accessible evidence"
+    },
+    {
+      "item_name":"trust-r",
+      "item_label":"TRUST R",
+      "item_description":"To be responsible for ensuring the authenticity and integrity of data holdings and for the reliability and persistence of its service"
+    },
+    {
+      "item_name":"trust-U",
+      "item_label":"TRUST U",
+      "item_description":"To ensure that the data management norms and expectations of target user communities are met"
+    },
+    {
+      "item_name":"trust-s",
+      "item_label":"TRUST S",
+      "item_description":"To sustain services and preserve data holdings for the long-term"
+    },
+    {
+      "item_name":"trust-te",
+      "item_label":"TRUST TE",
+      "item_description":"To provide infrastructure and capabilities to support secure, persistent, and reliable services"
+    }
+  ]
+}

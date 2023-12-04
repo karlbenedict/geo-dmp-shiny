@@ -1,0 +1,119 @@
+{
+  "name":"edmf",
+  "label":"NOAA Environmental Data Management Framework",
+  "description":"NOAA Environmental Data Management Framework",
+  "reference_url":"https://nosc.noaa.gov/EDMC/framework.php",
+  "reference_doi":"",
+  "items":[
+    {
+      "item_name":"edmf-requirements",
+      "item_label":"EDMF RD",
+      "item_description":"Requirements Definition"
+    },
+    {
+      "item_name":"edmf-planning",
+      "item_label":"EDMF Pla",
+      "item_description":"Planning"
+    },
+    {
+      "item_name":"edmf-development",
+      "item_label":"EDMF Dev",
+      "item_description":"Development"
+    },
+    {
+      "item_name":"edmf-operations",
+      "item_label":"EDMF Ops",
+      "item_description":"Operations"
+    },
+    {
+      "item_name":"edmf-collection",
+      "item_label":"EDMF Col",
+      "item_description":"Collection"
+    },
+    {
+      "item_name":"edmf-processing",
+      "item_label":"EDMF Pro",
+      "item_description":"Processing"
+    },
+    {
+      "item_name":"edmf-qc",
+      "item_label":"EDMF QC",
+      "item_description":"Quality Control"
+    },
+    {
+      "item_name":"edmf-documentation",
+      "item_label":"EDMF Doc",
+      "item_description":"Documentation"
+    },
+    {
+      "item_name":"edmf-cataloging",
+      "item_label":"EDMF Cat",
+      "item_description":"Cataloging"
+    },
+    {
+      "item_name":"edmf-dissemination",
+      "item_label":"EDMF Dis",
+      "item_description":"Dissemination"
+    },
+    {
+      "item_name":"edmf-preservation",
+      "item_label":"EDMF Pre",
+      "item_description":"Preservation"
+    },
+    {
+      "item_name":"edmf-stewardship",
+      "item_label":"EDMF Ste",
+      "item_description":"Stewardship"
+    },
+    {
+      "item_name":"edmf-tracking",
+      "item_label":"EDMF UT",
+      "item_description":"Usage Tracking"
+    },
+    {
+      "item_name":"edmf-disposition",
+      "item_label":"EDMF FD",
+      "item_description":"Final Disposition"
+    },
+    {
+      "item_name":"edmf-reception",
+      "item_label":"EDMF Rec",
+      "item_description":"Reception"
+    },
+    {
+      "item_name":"edmf-understanding",
+      "item_label":"EDMF Und",
+      "item_description":"Understanding"
+    },
+    {
+      "item_name":"edmf-analysis",
+      "item_label":"EDMF Ana",
+      "item_description":"Analysis"
+    },
+    {
+      "item_name":"edmf-va-products",
+      "item_label":"EDMF VAP",
+      "item_description":"Value Added Products"
+    },
+    {
+      "item_name":"edmf-feedback",
+      "item_label":"EDMF UF",
+      "item_description":"User Feedback"
+    },
+    {
+      "item_name":"edmf-citation",
+      "item_label":"EDMF Cit",
+      "item_description":"Citation"
+    },
+    {
+      "item_name":"edmf-tagging",
+      "item_label":"EDMF Tag",
+      "item_description":"Tagging"
+    },
+    {
+      "item_name":"edmf-gap",
+      "item_label":"EDMF GA",
+      "item_description":"Gap Assessment"
+    }
+  ]
+}

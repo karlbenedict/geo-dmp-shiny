@@ -1,0 +1,104 @@
+{
+  "name":"eea",
+  "label":"EEA Data/Information management framework",
+  "description":"EEA Data/Information management framework",
+  "reference_url":"https://eni-seis.eionet.europa.eu/east/governance/project-documents/eea-data-information-management-framework",
+  "reference_doi":"",
+  "items":[
+    {
+      "item_name":"eea-requirements",
+      "item_label":"EEA RA",
+      "item_description":"EEA Requirements Analysis"
+    },
+    {
+      "item_name":"eea-components",
+      "item_label":"EEA CID",
+      "item_description":"EEA Component Identification"
+    },
+    {
+      "item_name":"eea-content",
+      "item_label":"EEA CS",
+      "item_description":"EEA Content Specification"
+    },
+    {
+      "item_name":"eea-content",
+      "item_label":"EEA DAA",
+      "item_description":"EEA Data Availability Audit"
+    },
+    {
+      "item_name":"eea-source_id",
+      "item_label":"EEA DSI",
+      "item_description":"EEA Data Source Identification"
+    },
+    {
+      "item_name":"eea-development",
+      "item_label":"EEA Dev",
+      "item_description":"EEA Development"
+    },
+    {
+      "item_name":"eea-acquisition",
+      "item_label":"EEA Acq",
+      "item_description":"EEA Acquisition (input)"
+    },
+    {
+      "item_name":"eea-processing",
+      "item_label":"EEA Pro",
+      "item_description":"EEA Processing"
+    },
+    {
+      "item_name":"eea-qc",
+      "item_label":"EEA QC",
+      "item_description":"EEA Quality Control"
+    },
+    {
+      "item_name":"eea-documentation",
+      "item_label":"EEA DC",
+      "item_description":"EEA Documentation & Cataloguing"
+    },
+    {
+      "item_name":"eea-publication",
+      "item_label":"EEA Pub",
+      "item_description":"EEA Publication (output)"
+    },
+    {
+      "item_name":"eea-preservation",
+      "item_label":"EEA PA",
+      "item_description":"EEA Preservation/Archiving"
+    },
+    {
+      "item_name":"eea-analysis",
+      "item_label":"EEA Ana",
+      "item_description":"EEA Analysis"
+    },
+    {
+      "item_name":"eea-va-products",
+      "item_label":"EEA VAPC",
+      "item_description":"EEA Value Added Product Creation"
+    },
+    {
+      "item_name":"eea-dissemination",
+      "item_label":"EEA Dis",
+      "item_description":"EEA Dissemination"
+    },
+    {
+      "item_name":"eea-tracking",
+      "item_label":"EEA UT",
+      "item_description":"EEA Usage Tracking"
+    },
+    {
+      "item_name":"eea-feedback",
+      "item_label":"EEA UF",
+      "item_description":"EEA User Feedback"
+    },
+    {
+      "item_name":"eea-citation",
+      "item_label":"EEA Cit",
+      "item_description":"EEA Citation"
+    },
+    {
+      "item_name":"eea-gap",
+      "item_label":"EEA GA",
+      "item_description":"EEA Gap Analysis"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name":"nstc",
+  "label":"US NSTC Framework for EO Data",
+  "description":"US National Science and Technology Council Common Framework for Earth Observation Data",
+  "reference_url":"https://usgeo.gov/uploads/common_framework_for_earth_observation_data.pdf",
+  "reference_doi":"",
+  "items":[
+    {
+      "item_name":"nstc_discovery",
+      "item_label":"NSTC SD",
+      "item_description":"Search and Discovery"
+    },
+    {
+      "item_name":"nstc_access",
+      "item_label":"NSTC DA",
+      "item_description":"Data Access"
+    },
+    {
+      "item_name":"nstc_documentation",
+      "item_label":"NSTC DD",
+      "item_description":"Data Documentation"
+    },
+    {
+      "item_name":"nstc_compatibility",
+      "item_label":"NSTC CFV",
+      "item_description":"Compatible Formats and Vocabularies"
+    }
+  ]
+}
