@@ -94,7 +94,7 @@ save_edge <- function(outdir, source, target, relationship, session_id){
     relationship = relationship,
     session_id = session_id
   )
-  fileName = sprintf("%s_%s.csv", as.integer(Sys.time()), digest::digest(data))
+  fileName = sprintf("%s_%s_%s.csv", session_id, as.integer(Sys.time()), digest::digest(data))
   write.csv(
     x = data,
     file = file.path(outdir, fileName),
@@ -165,7 +165,7 @@ ui = fluidPage(
   useShinyjs(),
   sidebarLayout(
     sidebarPanel(
-      checkboxInput("demo_mode", "Demo Mode", value = TRUE),
+      checkboxInput("demo_mode", "Show only relationships entered in this session", value = TRUE),
       checkboxInput("limit_to_principle_pair", "Limit Graph to Principle Frameworks Pair", value = TRUE),
       tags$hr(),
       tags$h3("Principle Frameworks"),
@@ -184,19 +184,19 @@ ui = fluidPage(
                   label = "Source Principle", 
                   choices = "", 
                   selected = 1),
-      selectInput("target_principle", 
-                  label = "Target Principle", 
-                  choices = "", 
-                  selected = 1),
       radioButtons("relationship", 
                    label = "Relationship between source and target principles", 
                    choices = list(
                      "Limits" = -1,
                      "No relationship" = 0,
                      "Supports" = 1
-                    ),
-                   selected = 0
                    ),
+                   selected = 0
+      ),
+      selectInput("target_principle", 
+                  label = "Target Principle", 
+                  choices = "", 
+                  selected = 1),
       actionButton("submit",
                    label = "Submit Relationship"),
       tags$hr(style = "border: 5px solid black"),

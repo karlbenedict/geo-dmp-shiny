@@ -40,3 +40,6 @@ vignettes/*.pdf
 
 # Mac-specific hidden files
 .DS_Store
+
+# files in the demo_data directory
+demo_data/
