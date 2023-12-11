@@ -43,3 +43,6 @@ vignettes/*.pdf
 
 # files in the demo_data directory
 demo_data/
+responses/
+submissions/
+attribution/

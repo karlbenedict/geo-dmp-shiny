@@ -137,9 +137,15 @@ get_principle_choices <-  function(f_nodes, f_framework) {
   return(choices)
 }
 
-load_edges <- function(outdir) {
-  files <- list.files(outdir, pattern = "\\.csv$", full.names = TRUE)
-  #print(files)
+load_edges <- function(session_id, exclude_base) {
+  print(paste("executing load_edges", exclude_base))
+  files <- list.files("demo_data", pattern = paste(session_id, "\\S*\\.csv$", sep=""), full.names = TRUE)
+  print(files)
+  if (!exclude_base) {
+    print("excluding base relationships from list of edges")
+    files <- append(files,  list.files("data", pattern = "\\.csv$", full.names = TRUE))
+  } 
+  print(files)
   if (length(files) > 0){
     data <- lapply(files, read.csv, stringsAsFactors = FALSE) 
     # Concatenate all data together into one data.frame
@@ -165,7 +171,7 @@ ui = fluidPage(
   useShinyjs(),
   sidebarLayout(
     sidebarPanel(
-      checkboxInput("demo_mode", "Show only relationships entered in this session", value = TRUE),
+      checkboxInput("exclude_base", "Show only relationships entered in this session", value = TRUE),
       checkboxInput("limit_to_principle_pair", "Limit Graph to Principle Frameworks Pair", value = TRUE),
       tags$hr(),
       tags$h3("Principle Frameworks"),
@@ -191,7 +197,8 @@ ui = fluidPage(
                      "No relationship" = 0,
                      "Supports" = 1
                    ),
-                   selected = 0
+                   selected = 0,
+                   inline = TRUE
       ),
       selectInput("target_principle", 
                   label = "Target Principle", 
@@ -202,13 +209,17 @@ ui = fluidPage(
       tags$hr(style = "border: 5px solid black"),
       tags$h4("Relationships entered in this session"),
       tableOutput("myEdgesTable"),
-      downloadButton("downloadMyEdges", "Download my entered relationships"),
+      tags$h5("Optional - Please provide your name and email address for attribution and contact if there are any questions regarding your submission."),
+      textInput("contributorName", "Name", value = ""),
+      textInput("contributorEmail", "e-mail Address", value=""),
+      actionButton("submitMyEdges", "Submit my entered relationships"),
+      tags$hr(style = "border: 5px solid black"),
       tags$h4("All relationships"),
       tableOutput("edgesTable")
     ),
     mainPanel(
-      plotOutput('connections'),
-      tableOutput("principle_descriptions"),
+      plotOutput('connections', width = 900, height = 900),
+      tableOutput("principle_descriptions")
       #verbatimTextOutput("dataDirectory", placeholder = TRUE),
       #verbatimTextOutput("sourceFramework", placeholder = TRUE),
       #verbatimTextOutput("targetFramework", placeholder = TRUE)
@@ -221,6 +232,7 @@ server = function(input, output, session) {
   data_directory <- reactiveVal("demo_data")              # the location where saved relationship files will be saved. toggled by the demo_mode checkbox input 
   session_id <- reactiveVal(UUIDgenerate())               # a UUID assigned to the user session that is included in each created relationship
   nodes <- reactiveVal(get_principles(principles_files))  # these are fixed and based on the content of the principles JSON files
+  exclude_base <- reactiveVal(TRUE)
   # initiaize the tibble containing the relationships added during the current session. updated each time a new relationship is created 
   my_data <- reactiveVal(
     tibble(
@@ -241,14 +253,14 @@ server = function(input, output, session) {
   data <- reactivePoll(1000,
                        session,
                        checkFunc = function () {
-                         files <- list.files(data_directory(), pattern = "\\.csv$", full.names = TRUE)
-                         #print(paste(length(files),data_directory(),sep="_"))
-                         paste(length(files),data_directory(),sep="_")
+                         files <- list.files(data_directory(), pattern = paste(session_id(), "\\S*\\.csv$", sep=""), full.names = TRUE)
+                         #print(paste(length(files),exclude_base(),sep="_"))
+                         paste(length(files),exclude_base(),sep="_")
                        },
                        valueFunc = function () {
                          #print("A new file was added")
-                         files <- list.files(data_directory(), pattern = "\\.csv$", full.names = TRUE)
-                         dt <- load_edges(data_directory()) %>% 
+                         files <- list.files(data_directory(), pattern = paste(session_id(), "\\S*\\.csv$", sep=""), full.names = TRUE)
+                         dt <- load_edges(session_id(), exclude_base()) %>% 
                            left_join(nodes(), relationship = "many-to-one", by = join_by(source_name == item_name)) %>% 
                            mutate(source = id,
                                   source_label = item_label,
@@ -292,10 +304,10 @@ server = function(input, output, session) {
                                        select(Source, Target, Relationship))
   
   output$connections <- renderPlot({
-    print(input$source)
-    print(input$target)
-    print("printing plot_edges")
-    print(edges())
+    #print(input$source)
+    #print(input$target)
+    #print("printing plot_edges")
+    #print(edges())
     if (input$limit_to_principle_pair) {
       plot_edges <- edges() %>% 
         filter(source_framework == input$source & target_framework == input$target)
@@ -305,10 +317,10 @@ server = function(input, output, session) {
       plot_edges <- edges()
       plot_nodes <- nodes()
     }
-    print("printing plot_edges")
-    print(plot_edges)
-    print("printing plot_nodes")
-    print(plot_nodes)
+    #print("printing plot_edges")
+    #print(plot_edges)
+    #print("printing plot_nodes")
+    #print(plot_nodes)
     net <- graph_from_data_frame(d=plot_edges, v=plot_nodes, directed=T)
     set_graph_style(plot_margin = margin(1,1,1,1))
     ggraph(net, layout = 'linear', circular = TRUE) +
@@ -327,8 +339,14 @@ server = function(input, output, session) {
                                  labels=c("Limits", "No Relationship", "Supports"),
                                  name="Type of Relationship") +
       geom_node_label(aes(label = item_label, color = label), repel = FALSE, size = 4) +
-      labs(color='Principle Framework')
-  })
+      labs(color='Principle Framework') +
+      coord_fixed()  
+      #expand_limits(x=2.5) +
+      #theme(plot.margin = margin(.5,.5,.5,.5, "cm"),
+      #      legend.box.margin = margin(10,10,10,10,"pt"))
+  },
+  width = 900,
+  height = 900)
   
   output$principle_descriptions <- renderTable(
     nodes() %>% 
@@ -364,6 +382,7 @@ server = function(input, output, session) {
     )
   })
   
+  
   observeEvent(input$submit, {
     save_edge(
       data_directory(),
@@ -374,21 +393,37 @@ server = function(input, output, session) {
       )
   })
   
-  observeEvent(input$demo_mode, {
-    if (input$demo_mode) {
-      data_directory("demo_data")
-    } else {
-      data_directory("data")
-    }
+  observeEvent(input$exclude_base, {
+    exclude_base(input$exclude_base)
+    #print(exclude_base())
   })
   
-  output$downloadMyEdges <- downloadHandler(
-    filename = function(){sprintf("export_data_%s_%s.csv", as.integer(Sys.time()), session_id())},
-    content = function(fname){
-      dt <- my_data() %>% 
-        select(source_name, target_name, relationship, session_id)
-      write.csv(dt, fname)
-    }
-  )
+  observeEvent(input$submitMyEdges, {
+    filename  <-  sprintf("submissions/submission_%s_%s.csv", as.integer(Sys.time()), session_id())
+    contributor_filename <- sprintf("attribution/attribution_%s_%s.csv", as.integer(Sys.time()), session_id())
+    write.csv(tibble(
+      session_id = session_id(),
+      contributor_name = input$contributorName,
+      contributor_email = input$contributorEmail
+      ),
+      contributor_filename,
+      row.names = FALSE,
+      quote = TRUE)
+    dt <- my_data() %>% 
+      select(source_name, target_name, relationship, session_id)
+    write.csv(dt, 
+              filename,
+              row.names = FALSE,
+              quote = TRUE)
+  })
+  
+  #output$downloadMyEdges <- downloadHandler(
+  #  filename = function(){sprintf("export_data_%s_%s.csv", as.integer(Sys.time()), session_id())},
+  #  content = function(fname){
+  #    dt <- my_data() %>% 
+  #      select(source_name, target_name, relationship, session_id)
+  #    write.csv(dt, fname)
+  #  }
+  #)
 }
 )
