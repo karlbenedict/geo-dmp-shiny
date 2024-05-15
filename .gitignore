@@ -42,7 +42,7 @@ vignettes/*.pdf
 .DS_Store
 
 # files in the demo_data directory
-demo_data/
-responses/
-submissions/
-attribution/
+demo_data/*.csv
+responses/*.csv
+submissions/*.csv
+attribution/*.csv
